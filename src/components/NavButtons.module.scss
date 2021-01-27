@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid brown;
+}
+
+.navButtons {
+  display: flex;
+}
+
+.todayButton, .timeZoneButton {
+  margin: 0 5px;
+}

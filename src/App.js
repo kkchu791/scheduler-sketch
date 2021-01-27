@@ -1,10 +1,13 @@
-import { Scheduler } from './components';
+import { Main } from './components';
 import './App.css';
+import { AuthProvider } from './context';
 
 function App() {
   return (
     <div className="App">
-      <Scheduler />
+      <AuthProvider>
+        <Main />
+      </AuthProvider>
     </div>
   );
 }

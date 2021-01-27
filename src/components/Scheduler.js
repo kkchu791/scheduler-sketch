@@ -1,42 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Scheduler.module.scss';
-import { blocks } from '../constants/scheduler';
-import { Block } from './Block';
-import { SelectedBlocks } from './SelectedBlocks';
+import { Day } from './Day';
+import { DateBlock } from './DateBlock';
+import { SchedulerControls } from './SchedulerControls';
+import { TimeGrids } from './TimeGrids';
 
-export const Scheduler = () => {
-
-  const [selectedBlocks, setSelectedBlocks] = useState([])
-  const renderBlock = (block) => {
-    return (
-      <div key={block.id}>
-        <Block
-          block={block}
-          uniqKey={block.id}
-          setSelectedBlocks={setSelectedBlocks}
-        />
-      </div>
-    )
-  }
-
+export const Scheduler = ({
+  timeBlocks,
+  selectedBlocks,
+  dates,
+  setSelectedBlocks,
+}) => {
   return (
     <div className={styles.container}>
-
-      <h1 className={styles.title}>
-        Scheduler
-      </h1>
-
-      <div className={styles.schedContainer}>
-        <div className={styles.blocks}>
-          {blocks.map(renderBlock)}
-        </div>
-
-        <div className={styles.selectedBlocks}>
-          <SelectedBlocks
-            selectedBlocks={selectedBlocks}
-          />
-        </div>
+      <SchedulerControls
+        startDate={dates[0]}
+        endDate={dates[6]}
+      />
+      <div className={styles.dates}>
+        {dates.map(date => <DateBlock date={date} />)}
       </div>
+      <div className={styles.grids}>
+        <TimeGrids timeBlocks={timeBlocks} />
+        {dates.map(date => {
+          const formattedDate = date.toISOString().slice(0,10);
+          return (
+            <Day
+              date={formattedDate}
+              timeBlocks={timeBlocks}
+              setSelectedBlocks={setSelectedBlocks}
+              selectedBlocks={selectedBlocks[formattedDate] || []}
+              
+            />
+          )
+        })}
+      </div>
+      
     </div>
   )
 }

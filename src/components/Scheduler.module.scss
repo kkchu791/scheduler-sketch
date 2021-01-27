@@ -1,23 +1,17 @@
 .container {
-  width: 100%;
-  height: 100%;
-  margin: 20px;
+  border: 1px solid red;
   padding: 20px;
+  flex-grow: 2;
 }
 
-.title { 
-  text-align: center;
+.grids {
+  display: flex;
+  height: 70%;
+  overflow-y: scroll;
 }
 
-.schedContainer {
-  display:flex;
-  justify-content: center;
-}
-
-.blocks {
-  margin-right: 50px;
-}
-
-.selectedBlocks {
-  margin-left: 50px;
+.dates {
+  margin-left: 29px;
+  display: flex;
+  width: 100%;
 }

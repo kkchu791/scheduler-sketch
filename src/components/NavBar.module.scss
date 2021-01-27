@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: lightsteelblue
+}
+
+.username, .logout {
+  margin-right: 30px;
+  text-decoration: none;
+  color: black;
+}

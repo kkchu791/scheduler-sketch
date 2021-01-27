@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid blueviolet;
+  background: #9BC4E2;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 75px;
+  z-index: 1;
+}
+
+.blockInfo {
+  border: 1px solid orange;
+  font-size: 14px;
+}

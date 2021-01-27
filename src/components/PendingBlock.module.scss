@@ -1,14 +1,20 @@
 .container {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid darkblue;
-  width: 98%;
-  height: 98%;
+  flex-direction: column;
+  border: 2px solid blue;
+  height: 154px;
+  z-index: 1;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 148px;
 }
 
 .bookButton {
-  margin: 10px;
+  padding: 10px;
 }
 
 .cancelButton {

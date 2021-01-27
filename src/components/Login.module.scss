@@ -1,0 +1,33 @@
+.container {
+  height: 500px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  padding-left: 100px;
+  flex-direction: column;
+}
+
+.loginForm {
+  margin: 0 50px 0 0;
+}
+
+.emailField, .passwordField {
+  display: flex;
+  margin: 30px 0;
+  width: 400px;
+}
+
+.emailField {
+  width: 300px !important;
+}
+
+.loginButton {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 75px 0 0;
+}
+
+.cancelButton {
+  margin-right: 12px;
+  color: #b2b0b0;
+}

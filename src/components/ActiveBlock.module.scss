@@ -1,16 +1,24 @@
 .container {
+  position: absolute;
   display: flex;
   justify-content: space-between;
-  border: 1px solid blueviolet;
-  width: 100%;
-  height: 100%;
+  border: 2px solid blueviolet;
   background: #9BC4E2;
+  top: 0;
+  left: 0;
+  width: 148px;
+  height: 154px;
+  z-index: 1;
 }
 
-.time {
-  margin: 15px;
+.blockInfo {
+  border: 1px solid orange;
 }
 
-.cancel {
-  margin: 15px;
+.blockButton {
+  margin: 2px;
+}
+
+.time, .name {
+  
 }

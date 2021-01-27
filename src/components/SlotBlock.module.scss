@@ -1,5 +1,15 @@
 .container {
-  border: 1px solid green;
-  width: 300px;
-  height: 200px;
+  position:  relative;
+  height: 100%;
+  border-right: 1px solid blue;
+  border-left: 1px solid blue;
+  font-size: 14px;
+}
+
+.hourStart {
+  border-top: 1px solid blue;
+}
+
+.minuteGrid {
+  border-top: 1px dotted rgb(202, 202, 242);
 }

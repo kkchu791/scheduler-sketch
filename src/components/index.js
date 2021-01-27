@@ -1,1 +1,1 @@
-export { Scheduler } from './Scheduler';
+export { Main } from './Main';

@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  border: 2px solid blueviolet;
+  justify-content: space-between;
+  background: #d4e3ee;
+  width: 148px;
+  height: 37.5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
