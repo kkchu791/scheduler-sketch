@@ -1,6 +1,6 @@
 import { StylesProvider } from '@material-ui/core';
 import React from 'react';
-import styles from './Error.module.scss'
+import styles from './Error.module.scss';
 
 export const Error = ({
   error

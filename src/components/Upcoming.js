@@ -10,20 +10,21 @@ export const Upcoming = () => {
   const [block, setBlock] = useState(null);
 
   useEffect(() => {
+    const getUpcomingBlock = async () => {
+      const response = await getUpcomingBlockApi({
+        userId: userDetails.id,
+      });
+  
+      if (response.data) {
+        setBlock(response.data)
+      } else {
+        setBlock(null);
+      }
+    };
+
+    
     getUpcomingBlock();
-  }, [])
-
-  const getUpcomingBlock = async () => {
-    const response = await getUpcomingBlockApi({
-      userId: userDetails.id,
-    });
-
-    if (response.data) {
-      setBlock(response.data)
-    } else {
-      setBlock(null);
-    }
-  };
+  }, [userDetails.id]);
 
   let tenMinutesRemaining;
   let targetTime;

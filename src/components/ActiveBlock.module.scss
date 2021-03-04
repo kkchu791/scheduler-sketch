@@ -11,8 +11,12 @@
   z-index: 1;
 }
 
+.disabled {
+  background: rgb(231, 228, 228) !important;
+}
+
 .blockInfo {
-  border: 1px solid orange;
+
 }
 
 .blockButton {

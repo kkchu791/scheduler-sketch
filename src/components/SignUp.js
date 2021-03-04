@@ -4,7 +4,6 @@ import {TextField, Button} from '@material-ui/core';
 import { PasswordField } from './PasswordField'; 
 import { signUp } from '../api';
 import { useHistory } from 'react-router-dom';
-import Alert from '@material-ui/lab/Alert';
 
 export const SignUp = () => {
   const [user, setUser] = useState({});

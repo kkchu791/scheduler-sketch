@@ -14,7 +14,7 @@ export const Login = () => {
                           history.location.state.previousPath === '/signup';
   const [isSnackBarOpen, setIsSnackBarOpen] = useState(isSuccessSignIn);
   const dispatch = useAuthDispatch();
-  const { loading, errorMessage } = useAuthState();
+  const { loading } = useAuthState();
   const [error, setError]  = useState('');
 
   const handleLogin = async () => {

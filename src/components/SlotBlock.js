@@ -20,7 +20,6 @@ export const SlotBlock = ({
   const [block, setBlock] = useState({});
   const {userDetails} = useAuthState();
   const isCreator = block && userDetails.id === block.creator_id;
-  const isDisabled = new Date(date + ' ' + timeBlock.start_time) < new Date();
 
   useEffect(() => {
     const selectedBlock = selectedBlocks.find(sBlock => {
@@ -70,7 +69,7 @@ export const SlotBlock = ({
                 date={date}
                 userDetails={userDetails}
                 setBlock={setBlock}
-                isDisabled={isDisabled}
+                isDisabled={new Date(date + ' ' + timeBlock.end_time) < new Date()}
               />,
   }
 
@@ -86,7 +85,7 @@ export const SlotBlock = ({
       <InactiveBlock
         setStatus={setStatus}
         status={status}
-        isDisabled={isDisabled}
+        isDisabled={new Date(date + ' ' + timeBlock.start_time) < new Date()}
       />
       {BLOCKS[status]}
     </div>

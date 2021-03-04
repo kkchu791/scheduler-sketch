@@ -7,7 +7,7 @@ export const TimeGrids = ({
   timeBlocks,
 }) => {
   const target = useRef(null);
-  const [userTime, setUserTime] = useState(roundMinutes(new Date()));
+  const userTime = roundMinutes(new Date());
 
   useEffect(() => {    
     if (target.current) {
